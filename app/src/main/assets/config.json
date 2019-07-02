@@ -1,0 +1,12 @@
+{
+  "core": {
+    "backgroundColor": "#333333",
+    "productionMode": true,
+    "pids": [#ASSIGNED_PID],
+    "gcmSenderId": "#GCM_SENDER_ID",
+    "noInternetMessage": "Please check your internet connection",
+    "waitForPageLoadEvent": true,
+    "video_upload_key" : "#PROVIDED_VIDEO_KEY"
+  },
+  "noConnectionError": "Please check your internet connection"
+}

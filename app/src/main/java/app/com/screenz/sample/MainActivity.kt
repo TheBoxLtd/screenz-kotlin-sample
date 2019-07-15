@@ -5,8 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
-import android.support.multidex.MultiDex
-import android.support.v4.app.FragmentActivity
+import androidx.multidex.MultiDex
+import androidx.fragment.app.FragmentActivity
 import android.util.Log
 import com.google.gson.Gson
 import com.screenz.shell_library.ShellLibraryBuilder
@@ -54,7 +54,7 @@ class MainActivity : FragmentActivity() {
     private val dataReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             val data = intent.getStringExtra("data")
-            Log.d("DATA RECEIVER", data)
+//            Log.d("DATA RECEIVER", data)
             if (data.equals("sdk-exit-new", ignoreCase = true)) {
                 finish()
             }
@@ -80,7 +80,7 @@ class MainActivity : FragmentActivity() {
             }
             mLocalConfig = Gson().fromJson(buf.toString(), LocalConfig::class.java)
         } catch (e: Exception) {
-            Log.e("EXCEPTION",e.message)
+//            Log.e("EXCEPTION",e.message)
         } finally {
             if (`in` != null) {
                 try {
